@@ -1,0 +1,52 @@
+.button-right{
+/* margin-left: 200px; */
+float: right;
+}
+
+form{
+    padding-top: 10px;
+}
+
+.form-alingment{
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    float: right;
+}
+
+.form-alingment-left{
+    /* width: 500px; */
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    float: left;
+}
+
+fieldset {
+    display:inline;
+    border:none;
+    /* width: 50% */
+    padding: 0%;
+  
+}
+
+#formGroup {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.px-3{
+    padding-bottom: 40px !important;     
+}
+/* .col-6 {
+width: 100%;
+} */
+
+.col-sm-12{
+    padding: 0%;
+}
+
+.responsive-fieldset {display:inline; width: 100%}
+
+#category:focus option:first-of-type {
+    display: none;
+}
