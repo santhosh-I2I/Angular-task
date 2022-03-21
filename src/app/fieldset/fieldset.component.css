@@ -1,0 +1,8 @@
+fieldset {
+    display:inline;
+    border:none;
+    /* width: 50% */
+    padding: 0%;
+    padding-bottom: 10px;
+  
+}

@@ -4,11 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FieldsetComponent } from './fieldset/fieldset.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeFormComponent
+    EmployeeFormComponent,
+    FieldsetComponent,
   ],
   imports: [
     BrowserModule,

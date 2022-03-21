@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { countries } from '../mock-interface';
-import { COUNTRIES } from '../mock-data';
+import { countries, feildset } from '../mock-interface';
+import { COUNTRIES, FEILDSET } from '../mock-data';
 
 @Component({
   selector: 'app-employee-form',
@@ -11,6 +11,7 @@ import { COUNTRIES } from '../mock-data';
 export class EmployeeFormComponent implements OnInit {
   
   countries:countries[] = COUNTRIES
+  feildset:feildset[] = FEILDSET
 
   form = new FormGroup({
     firstName: new FormControl('', Validators.required),
@@ -31,9 +32,11 @@ export class EmployeeFormComponent implements OnInit {
     ]),
     password: new FormControl('', [
       Validators.required,
-      Validators.minLength(6)
+      Validators.minLength(6),
+      Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')
     ])
    });
+
     constructor() { }
   
     onReset() {

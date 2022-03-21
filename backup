@@ -1,0 +1,46 @@
+<fieldset class="col-md-6 offset-md-0"> 
+             <div class="form-group ">
+               <div class="pdx-2"> 
+               <label>First Name</label>
+               <input type="text"  class="form-control span6 offset6 form-alingment" formControlName="firstName" [ngClass]="{'is-invalid':form.get('firstName')?.touched && form.get('firstName')?.invalid}" required/>   
+               <div class="invalid-feedback">
+                 <div>First Name is required</div>
+               </div>
+               </div>
+              </div>
+            </fieldset>
+            <fieldset class="col-md-6 offset-md-0">
+              <div class="form-group ">
+                <label>Last Name</label>
+                <input type="text" class="form-control span6 offset6 form-alingment-left" formControlName="lastName" [ngClass]="{'is-invalid':form.get('lastName')?.touched && form.get('lastName')?.invalid}" required />  
+                <div class="invalid-feedback">
+                  <div>Last Name is required</div>
+                </div>
+              </div>
+            </fieldset>
+
+
+
+--------------------------------------------------------------
+ngfor
+
+<fieldset class="col-md-6 offset-md-0"> 
+             <div class="form-group" *ngFor="let fields of feildset">
+               <div class="pdx-2"> 
+               <label class="label" for={{fields.columnName}}>{{fields.name}}</label>
+               <input type="text" class="fields.name" formControlName={{fields.columnName}} [ngClass]="{'is-invalid':form.get(fields.columnName)?.touched && form.get(fields.columnName)?.invalid}"required/>   
+               <div class="invalid-feedback">
+                 <div>{{fields.errorMessage}}</div>
+               </div>
+               </div>
+              </div>
+            </fieldset>
+            <!-- <fieldset class="col-md-6 offset-md-0">
+              <div class="form-group ">
+                <label>Last Name</label>
+                <input type="text" class="form-control span6 offset6 form-alingment-left" formControlName="lastName" [ngClass]="{'is-invalid':form.get('lastName')?.touched && form.get('lastName')?.invalid}" required />  
+                <div class="invalid-feedback">
+                  <div>Last Name is required</div>
+                </div>
+              </div>
+            </fieldset> -->
